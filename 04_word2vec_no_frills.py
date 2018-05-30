@@ -38,7 +38,8 @@ def word2vec(batch_gen):
 
     with tf.name_scope('embedding_matrix'):
         embed_matrix = tf.Variable(tf.random_uniform([VOCAB_SIZE, EMBED_SIZE], -1.0, 1.0),
-                            name='embed_matrix')#care about most
+                            name='embed_matrix')#CARE about most. the VOCAB_SIZE is the 50000, which is generated
+        #according to the one-hot vetor
 
     # Step 3: define the inference
     with tf.name_scope('loss'):
